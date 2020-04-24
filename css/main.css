@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 150px;
 }
 .banner__header-text {
-  font-family: "Dosis";
+  font-family: "Dosis", sans-serif;
   text-align: left;
   color: #fff;
   font-size: 54px;
@@ -346,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 100%;
   height: 300px;
-  background: url("../../img/portfolio1.png");
+  background: url("../../../img/portfolio1.png");
   background-size: cover;
 }
 
@@ -609,7 +609,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .download__description p:nth-child(1) {
   color: black;
-  font-family: "Dosis";
+  font-family: "Dosis", sans-serif;
   font-size: 30px;
   margin-bottom: 5px;
 }
