@@ -352,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pricing {
-  padding: 120px 0;
+  padding: 120px 0 100px 0;
 }
 .pricing__header {
   display: flex;
@@ -367,6 +367,7 @@ h1, h2, h3, h4, h5, h6 {
 .pricing__item {
   background: #f7fafc;
   padding-bottom: 40px;
+  margin-bottom: 20px;
 }
 .pricing__item:hover {
   background: #fff;
