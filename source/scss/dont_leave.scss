@@ -1,0 +1,67 @@
+.dont-leave {
+  position: relative;
+
+  .iphone {
+    position: absolute;
+    left: 0%;
+    top: 0;
+  }
+
+  @media (max-width: 1600px) {
+    .iphone {
+      left: -10%;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .iphone {
+      left: -30%;
+    }
+  }
+  @media (max-width: 991px) {
+    .iphone {
+      display: none;
+      
+    }
+  }
+  
+  
+  .container {
+    border-top: 2px solid #eeeeee;
+    padding: 175px 0;
+  }
+
+  &__left {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    padding-right: 0;
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__text {
+    p:nth-child(1) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__features {
+    padding-top: 40px;
+    
+    div {
+      padding: 5px 0 5px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+  }
+}

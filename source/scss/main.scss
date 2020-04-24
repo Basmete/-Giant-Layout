@@ -1,0 +1,51 @@
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Dosis";
+  color: black;
+  padding-bottom: 35px;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+@import "zeroing.scss";
+@import "banner.scss";
+@import "features.scss";
+@import "dont_leave.scss";
+@import "portfolio.scss";
+@import "pricing.scss";
+@import "video.scss";
+@import "reviews.scss";
+@import "download.scss";
+@import "footer.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "arrows.scss";
+
+body {
+  font-family: "Roboto";
+  color: #777777;
+  line-height: 2rem;
+}
+
+[class^="col"] {
+  display: flex;
+  flex-direction: column;
+}
+
+[class^="col"] div {
+  flex-grow: 1;
+}
+
+.kek {
+  display: block;
+}
+[class^="col"] .kek {
+  flex-grow: 1;
+}

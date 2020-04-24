@@ -1,0 +1,130 @@
+@import "variables.scss";
+
+.pricing {
+  padding: 120px 0;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 680px;
+    align-self: center;
+    padding-bottom: 80px;
+  }
+
+  &__item {
+    background: $light-grey;
+    padding-bottom: 40px;
+
+    &:hover {
+      background: #fff;
+      box-shadow: 0px 0px 15px 10px #f7fafc;
+
+      .pricing__price {
+        transition: all 1s ease 0s;
+        background: $gradient;
+        color: #fff;
+
+        &::before {
+          background-color: #fff;
+        }
+        &::after {
+          background-color: #fff;
+        }
+      }
+
+    }
+
+  }
+
+  &__var {
+    padding: 15px 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Dosis";
+    color: black;
+  }
+
+  &__price {
+    position: relative;
+    padding: 30px 0 55px 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Dosis";
+    color: black;
+    overflow: hidden;
+    background-color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -50%;
+      left: -50%;
+      width: 100%;
+      height: 100%;
+      background-color: $light-grey;
+      transform: skew(70deg)
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -50%;
+      right: -50%;
+      width: 100%;
+      height: 100%;
+      background-color: $light-grey;
+      transform: skew(-70deg)
+    }
+
+    
+  }
+
+  &__description {
+    padding: 40px 35px 50px 35px;
+
+    p {
+      position: relative;
+      text-align: center;
+      padding: 10px 0;
+
+      &:nth-child(-n+3) {
+        border-bottom: 1px dashed #eeeeee;
+      }
+    }
+  }
+
+  &__start-trial {
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 15px;
+    a {
+      color: $grey;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    a {
+      box-sizing: content-box;
+      padding: 10px 40px;
+      border: 2px solid #eeeeee;
+      border-radius: 30px;
+      display: inline-block;
+      background-color: #fff;
+      color: #333333;
+      font-weight: bold;
+
+      &:hover {
+        transition: all 1s ease 0s;
+        background: $gradient;
+        color: #fff;
+        box-shadow: inset 0 0 0 2px #eee;
+      }
+    }
+  }
+}

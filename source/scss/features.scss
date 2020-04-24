@@ -1,0 +1,52 @@
+.features {
+  padding: 120px 0 60px 0;
+
+  &__item {
+    position: relative;
+    margin-bottom: 60px;
+    
+
+    .features__logo {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 37.5px);
+    }
+  }
+
+  &__header {
+    font-size: 24px;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Dosis";
+    color: black;
+    padding-bottom: 20px;
+  }
+
+  &__logo {
+    height: 75px;
+    width: 75px;
+    border: 2px solid #eeeeee;
+    border-radius: 50%;
+    position: relative;
+    i {
+      position: absolute;
+      left: calc(50% - 15px);
+      top: calc(50% - 15px);
+      color: #f31f79;
+      font-size: 30px;
+    }
+  }
+
+  &__logo-container {
+
+  }
+
+  &__description {
+    
+    padding-left: 100px;
+    
+
+    
+
+  }
+}

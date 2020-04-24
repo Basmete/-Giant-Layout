@@ -1,0 +1,29 @@
+.footer {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 60px 0;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icons-row {
+    padding-bottom: 30px;
+    i {
+      cursor: pointer;
+      font-size: 20px;
+      margin-right: 30px;
+      &:last-child(){
+        margin-right: 0;
+      }
+      &:hover {
+        background: linear-gradient(to right, #fd6f2e 10%, #f32276);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
