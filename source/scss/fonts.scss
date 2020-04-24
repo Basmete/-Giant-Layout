@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Dosis";
-  src: url("/fonts/Dosis/Dosis-Bold.ttf") format("woff2")
+  src: url("./fonts/Dosis/Dosis-Bold.ttf") format("woff2")
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('/fonts/Icons/fonts/icomoon.ttf');
+  src:  url('./fonts/Icons/fonts/icomoon.ttf');
 }
 
 [class^="icon-"], [class*=" icon-"] {
