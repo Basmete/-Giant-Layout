@@ -135,6 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .banner__header-text {
   font-family: "Dosis", sans-serif;
+  font-weight: bold;
   text-align: left;
   color: #fff;
   font-size: 54px;
@@ -610,6 +611,7 @@ h1, h2, h3, h4, h5, h6 {
 .download__description p:nth-child(1) {
   color: black;
   font-family: "Dosis", sans-serif;
+  font-weight: bold;
   font-size: 30px;
   margin-bottom: 5px;
 }
