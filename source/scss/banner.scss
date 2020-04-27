@@ -1,11 +1,109 @@
 @import "variables.scss";
 
+.kek {
+  padding-left: 15px;
+}
+
 .banner {
   position: relative;
   min-height: 100vh;
   padding: 30px 0 220px 0;
   background: $gradient;
   color: #ffffff;
+
+  &__burger {
+    display: none;
+  }
+
+  @media (max-width:767px) {
+    body {
+      &.lock {
+        overflow:hidden;
+      }
+    }
+
+    .banner__burger {
+      
+      display: block;
+      position: fixed;
+      right: 20px;
+      width: 30px;
+      height: 20px;
+      z-index: 101;
+
+      &::before, &::after {
+        content: '';
+        background-color: $grey;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+      }
+
+      &::before {
+        transition: all 0.3s ease 0s;
+        top: 0;
+      }
+
+      &::after {
+        transition: all 0.3s ease 0s;
+        bottom: 0;
+      }
+
+      span {
+        position: absolute;
+        background-color: $grey;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
+      }
+
+      &.active {
+        &::before {
+
+          transform: rotate(45deg);
+          top: 9px;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 9px;
+        }
+
+        span {
+          transform: scale(0);
+        }
+      }
+      
+    }
+  }
+
+  @media (max-width: 425px) {
+    .banner__menu { //1231231231
+      padding-top: 50px;
+      position: fixed;
+      z-index: 100;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $gradient;
+      display: block;
+      transition: all 0.5s ease 0s;
+  
+      a {
+        display: block;
+        font-size: 30px;
+        width: 50%;
+      }
+  
+      &.active {
+        top:0;
+      }
+    }
+  }
 
   &__background {
     position: absolute;

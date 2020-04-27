@@ -1,48 +1,55 @@
-var rev = $('.rev_slider');
-rev.on('init', function(event, slick, currentSlide) {
-  var
-    cur = $(slick.$slides[slick.currentSlide]),
-    next = cur.next(),
-    prev = cur.prev();
-  prev.addClass('slick-sprev');
-  next.addClass('slick-snext');
-  cur.removeClass('slick-snext').removeClass('slick-sprev');
-  slick.$prev = prev;
-  slick.$next = next;
-}).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-  console.log('beforeChange');
-  var
-    cur = $(slick.$slides[nextSlide]);
-  console.log(slick.$prev, slick.$next);
-  slick.$prev.removeClass('slick-sprev');
-  slick.$next.removeClass('slick-snext');
-  next = cur.next(),
-    prev = cur.prev();
-  prev.prev();
-  prev.next();
-  prev.addClass('slick-sprev');
-  next.addClass('slick-snext');
-  slick.$prev = prev;
-  slick.$next = next;
-  cur.removeClass('slick-next').removeClass('slick-sprev');
+
+
+
+
+
+$(document).ready(function() {
+  $('.banner__burger').click(function(event) {
+    $('.banner__burger,.banner__menu').toggleClass('active');
+    $('body').toggleClass('lock');
+  })
 });
 
-rev.slick({
-  speed: 1000,
-  arrows: true,
-  dots: false,
-  focusOnSelect: true,
-  prevArrow: '<button> prev</button>',
-  nextArrow: '<button> next</button>',
-  infinite: true,
-  centerMode: true,
-  slidesPerRow: 1,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerPadding: '0',
-  swipe: true,
-  customPaging: function(slider, i) {
-    return '';
-  },
-  /*infinite: false,*/
-});
+$(document).ready(function(){
+  $('.slider3').slick({
+    arrows: true,
+    dots: true,
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: '0px',
+    responsive:[
+			{
+				breakpoint: 992,
+				settings: {
+          slidesToShow:2,
+          arrows: false
+				}
+			},
+			{
+				breakpoint: 550,
+				settings: {
+          slidesToShow:1,
+          arrows: false
+				}
+			}
+    ],
+    prevArrow: '<div class="left-arrow"><div class="arrow"><div class="arrow__vertical"></div></div></div>',
+    nextArrow: '<div class="right-arrow"><div class="arrow"><div class="arrow__vertical"></div></div></div>'
+  });
+  
+})
+
+// $(document).ready(function(){
+//   let cssValuesPrev1 = {
+//     "margin-right" : "-170px",
+// 		"z-index": "-5",
+//   }
+//   let cssValuesPrev2 = {
+//     "margin-right" : "-220px",
+// 		"z-index": "-2",
+//   }
+//   $('.slick-center').not('.slick-cloned').prev().css(cssValuesPrev1)
+//   // $('.slick-active').prev().prev().css(cssValuesPrev2)
+// })
+

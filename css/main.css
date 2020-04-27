@@ -91,12 +91,91 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+.kek {
+  padding-left: 15px;
+}
+
 .banner {
   position: relative;
   min-height: 100vh;
   padding: 30px 0 220px 0;
   background: linear-gradient(to right, #fd6f2e 30%, #f32276);
   color: #ffffff;
+}
+.banner__burger {
+  display: none;
+}
+@media (max-width: 767px) {
+  .banner body.lock {
+    overflow: hidden;
+  }
+  .banner .banner__burger {
+    display: block;
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    height: 20px;
+    z-index: 101;
+  }
+  .banner .banner__burger::before, .banner .banner__burger::after {
+    content: "";
+    background-color: #777;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .banner .banner__burger::before {
+    transition: all 0.3s ease 0s;
+    top: 0;
+  }
+  .banner .banner__burger::after {
+    transition: all 0.3s ease 0s;
+    bottom: 0;
+  }
+  .banner .banner__burger span {
+    position: absolute;
+    background-color: #777;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    transition: all 0.3s ease 0s;
+  }
+  .banner .banner__burger.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .banner .banner__burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .banner .banner__burger.active span {
+    transform: scale(0);
+  }
+}
+@media (max-width: 425px) {
+  .banner .banner__menu {
+    padding-top: 50px;
+    position: fixed;
+    z-index: 100;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #fd6f2e 30%, #f32276);
+    display: block;
+    transition: all 0.5s ease 0s;
+  }
+  .banner .banner__menu a {
+    display: block;
+    font-size: 30px;
+    width: 50%;
+  }
+  .banner .banner__menu.active {
+    top: 0;
+  }
 }
 .banner__background {
   position: absolute;
@@ -280,69 +359,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 80%;
 }
 
-.slick-slider {
-  margin-left: -12%;
-  margin-right: -12%;
-}
-
-.slick-list {
-  padding-top: 10% !important;
-  padding-bottom: 10% !important;
-  padding-left: 15% !important;
-  padding-right: 15% !important;
-}
-
-.slick-dots {
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.slick-track {
-  max-width: 100% !important;
-  transform: translate3d(0, 0, 0) !important;
-  perspective: 100px;
-}
-
-.slick-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  opacity: 0;
-  width: 100% !important;
-  transform: translate3d(0, 0, 0);
-  transition: transform 1s, opacity 1s;
-}
-
-.slick-snext,
-.slick-sprev {
-  display: block;
-}
-
-.slick-current {
-  opacity: 1;
-  position: relative;
-  display: block;
-  transform: translate3d(0, 0, 20px);
-  z-index: 2;
-}
-
-.slick-snext {
-  opacity: 1;
-  transform: translate3d(20%, 0, 0px);
-  z-index: 1;
-}
-
-.slick-sprev {
-  opacity: 1;
-  transform: translate3d(-20%, 0, 0px);
-}
-
 .test {
   display: block;
   width: 100%;
@@ -473,6 +489,11 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
 }
+@media (max-width: 748px) {
+  .video {
+    display: none;
+  }
+}
 
 .background-video {
   max-height: 400px;
@@ -528,6 +549,14 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+@media (max-width: 1270px) {
+  .reviews__row .left-arrow {
+    left: -25px;
+  }
+  .reviews__row .right-arrow {
+    right: -25px;
+  }
+}
 .reviews__title {
   padding-bottom: 35px;
 }
@@ -574,6 +603,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   margin-bottom: 5px;
 }
+@media (max-width: 376px) {
+  .item-review__name {
+    font-size: 12px;
+  }
+}
 
 .download {
   background: linear-gradient(to right, #fd6f2e 10%, #f32276);
@@ -594,6 +628,12 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(to right, #fd6f2e 10%, #f32276);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (max-width: 1200px) {
+  .download__item {
+    font-size: 12px;
+    padding: 15px;
+  }
 }
 .download__logo {
   display: flex;
@@ -644,6 +684,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.footer__copyright {
+  text-align: center;
+}
 
 @font-face {
   font-family: "icomoon";
@@ -675,7 +718,6 @@ h1, h2, h3, h4, h5, h6 {
   content: "";
 }
 
-/*===========================ARROWS===========================*/
 .arrow {
   position: relative;
   width: 40px;
@@ -744,4 +786,118 @@ body {
 
 [class^=col] .kek {
   flex-grow: 1;
+}
+
+.pek {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wrappers {
+  background: grey;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .wrappers {
+    padding: 50px 10px;
+  }
+}
+/* Основные стили */
+/* Слайдер */
+.slick-slider {
+  min-width: 0;
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Слайд */
+/* Слайд активный */
+/* Слайд основной */
+/* Слайд по центру */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки */
+/* Конкретный слайдер */
+.slider3 {
+  position: relative;
+  padding: 0px 0px;
+}
+
+@media (max-width: 767px) {
+  .slider3 {
+    padding: 0px 0px;
+  }
+}
+@media (max-width: 321px) {
+  .slider3 {
+    padding: 0;
+  }
+}
+.slider3 .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+}
+
+.slider3 .slick-arrow.slick-prev {
+  left: -20px;
+  background: url("../../img/sl-arrow_l.svg") 0 0/100% no-repeat red;
+}
+
+.slider3 .slick-arrow.slick-next {
+  right: 0;
+  background: url("../../img/sl-arrow_r.svg") 0 0/100% no-repeat;
+}
+
+.slider3 .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+.slider3 .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider3 .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.slider3 .slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.slider3 .slick-dots li.slick-active button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.slider__item {
+  padding: 0px 15px;
+  width: 100px;
 }

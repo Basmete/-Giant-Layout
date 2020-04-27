@@ -26,6 +26,11 @@ $gradient: $gradient;
         -webkit-text-fill-color: transparent;
       }
     }
+
+    @media (max-width: 1200px) {
+      font-size: 12px;
+      padding: 15px;
+    }
   }
 
   &__logo {

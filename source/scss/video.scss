@@ -10,7 +10,9 @@
     left: 0;
   }
 
-  
+  @media (max-width: 748px) {
+    display: none;
+  }
 
 }
 
