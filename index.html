@@ -23,6 +23,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./jquery.waterwheelCarousel.min.js">
     <link rel="stylesheet" href="./css/main.css" />
     <!-- <link
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
@@ -244,22 +245,41 @@
           </div>
         </div>
         
-          <!-- Контент -->
+          
     
-        <div class="slider3 sliderScreenshots">
-          <div class="slider__item filter">
-            <img src="/img/portfolio1.png" alt="">
+          <div class="section slider">
+  
+            <input type="radio" name="slider" id="slide-1" class="slider__radio">
+            <input type="radio" name="slider" id="slide-2" class="slider__radio">
+            <input type="radio" name="slider" id="slide-3" class="slider__radio" checked>
+            <input type="radio" name="slider" id="slide-4" class="slider__radio">
+            <input type="radio" name="slider" id="slide-5" class="slider__radio">
+            
+            <div class="slider__holder">
+        
+              <label for="slide-1" class="slider__itemz slider__item--1 card">
+                <img src="img/portfolio1.png" alt="">
+              </label>
+        
+              <label for="slide-2" class="slider__itemz slider__item--2 card">
+                <img src="img/portfolio1.png" alt="">
+              </label>
+        
+              <label for="slide-3" class="slider__itemz slider__item--3 card">
+                <img src="img/portfolio1.png" alt="">
+              </label>
+        
+              <label for="slide-4" class="slider__itemz slider__item--4 card">
+                <img src="img/portfolio1.png" alt="">
+              </label>
+        
+              <label for="slide-5" class="slider__itemz slider__item--5 card">
+                <img src="img/portfolio1.png" alt="">
+              </label>
+        
+            </div>
+            
           </div>
-          <div class="slider__item">
-            <img src="/img/portfolio1.png" alt="">
-          </div>
-          <div class="slider__item filter">
-            <img src="/img/portfolio1.png" alt="">
-          </div>
-          <div class="slider__item">
-            <img src="/img/portfolio1.png" alt="">
-          </div>
-        </div>
       
       </div>
     </section>
@@ -533,29 +553,6 @@
         </div>
       </div>
     </section>
-
-
-    <section>
-      <div class="container">
-        <!-- Контент -->
-  
-      <div class="slider3">
-        <div class="slider__item filter">
-          <img src="img/slides/01.jpg" alt="">
-        </div>
-        <div class="slider__item">
-          <img src="img/slides/02.jpg" alt="">
-        </div>
-        <div class="slider__item filter">
-          <img src="img/slides/03.jpg" alt="">
-        </div>
-        <div class="slider__item">
-          <img src="img/slides/04.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    </section>
-    
     <script src="slick.min.js"></script>
   </body>
   <script src="index.js"></script>

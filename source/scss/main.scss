@@ -13,8 +13,9 @@
 }
 
 
-
+@import "slider/styles.scss";
 @import "zeroing.scss";
+@import "sliderPortfolio.scss";
 @import "banner.scss";
 @import "features.scss";
 @import "dont_leave.scss";
@@ -173,7 +174,7 @@ body {
   padding: 0px 15px;
 	width: 100px;
 	img {
-		
+
 	}
 }
 
@@ -181,25 +182,10 @@ body {
 	
 }
 
-// .sliderScreenshots {
-
-// 	.slick-center {
-// 		z-index: 10;
-// 	}
-// 	// Next slide after center
-// 	.slick-center + div {
-// 		margin-left: -170px;
-// 		z-index: -1;
-// 		img {
-			
-// 		}
-// 	}
-	
-// 	.slick-center + div + div {
-// 		margin-left: -220px;
-// 		z-index: -2;
-// 	}
-// }
-
+.slider__itemz {
+	img {
+		width: 100%;
+	}
+}
 
 
