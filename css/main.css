@@ -1166,6 +1166,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   font-weight: 500;
 }
+.banner__button:focus {
+  box-shadow: 0 0 0 0.2rem transparent;
+}
 .banner__header {
   padding-bottom: 150px;
 }
